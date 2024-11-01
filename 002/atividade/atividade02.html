@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Exercício de JavaScript</h1>
+
+    <label for="seuNome">Digite seu nome:</label>
+    <input id="seuNome" type="text" placeholder="Digite aqui...">
+    <button onclick="exibirInfo()">Mostras Informações</button>
+
+    <h2 id="saida"></h2>
+
+    <script>
+
+
+        function exibirInfo() {
+            let idade = prompt("Digite sua idade");
+            let nome = document.getElementById("seuNome").value;
+            document.getElementById("saida").innerText = "Olá, " + nome + "! Sua idade é: " + idade + "!";
+        }
+    </script>
+
+</body>
+</html>
