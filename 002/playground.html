@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mensagem">
+    </div>
+
+    <h1>Entrada de dados com Input e Botão</h1>
+
+    <label for="nomeInput">Digite seu nome</label>
+    <input type="text" id="nomeInput" placeholder="Digite seu nome...">
+
+
+    <br></br>
+
+    <label for="cpfInput">Digite seu CPF</label>
+    <input type="number" id="cpfInput" placeholder="Seu CPF...">
+
+    <br></br>
+
+    <label for="emailInput">Digite seu E-mail</label>
+    <input type="email" id="emailInput" placeholder="Seu E-mail...">
+
+    <button onclick="exibirNome()">Enviar</button>
+
+    <p id="saida"></p>
+
+    <script>
+        // Saída de dados:
+        console.log("Olá Mundo!");
+        let nome = "Douglas";
+        console.log("Bem vindo, " + nome);
+
+        console.log();
+
+        nome = "Ronaldo";
+        document.getElementById("mensagem").innerText = nome;
+
+        // Entrada de dados:
+        //let idade = prompt("Qual é a sua idade?");
+        //console.log(nome , "tem" , idade);
+
+
+
+        function exibirNome() {
+        nome = document.getElementById("nomeInput").value;
+        document.getElementById("saida").innerText = "Novo nome: " + nome;
+        }
+
+        documen
+    </script>
+</body>
+</html>
