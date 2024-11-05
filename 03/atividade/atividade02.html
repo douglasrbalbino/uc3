@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada no Script</title>
+</head>
+<body>
+
+    <label for="valor">Digite o número para tabuada de soma</label>
+    <input id="valor" type="number" placeholder="Digite o número">
+    <button onclick="exibir()">Enviar</button>
+
+    <div id="saida"></div>
+
+    <script>
+ 
+        // Realizar operações e saída
+        function exibir() {
+        let valor = document.getElementById("valor").value;
+        let numero = parseInt(valor);
+
+        document.getElementById("saida").innerText =
+            numero + " + 1 =" + (numero + 1) + "\n" + // "\n" insere uma quebra de linha em JavaScript
+            numero + " + 2 =" + (numero + 2) + "\n" +
+            numero + " + 3 =" + (numero + 3) + "\n" +
+            numero + " + 4 =" + (numero + 4) + "\n" +
+            numero + " + 5 =" + (numero + 5) + "\n" +
+            numero + " + 6 =" + (numero + 6) + "\n" +
+            numero + " + 7 =" + (numero + 7) + "\n" +
+            numero + " + 8 =" + (numero + 8) + "\n" +
+            numero + " + 9 =" + (numero + 9) + "\n" +
+            numero + " + 10 =" + (numero + 10);
+        }
+
+    </script>
+</body>
+</html>
