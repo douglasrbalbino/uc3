@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Solicita idade e altura do usuário
+        let idade = parseInt(prompt("Ditite sua idade: "));
+        let altura = parseFloat(prompt("Digite sua altura"));
+        
+        // Verifica se a idade e altura antendem os rquisitos da atração
+        let podeEntrar = idade >= 18 && altura >= 1.6;        
+
+        // Exibição clara da saída para o usuário
+        let mensagem = podeEntrar? "Aprovado para uso do brinquedo" : "Reprovado para usar o brinquedo";
+        console.log(mensagem);
+    </script>
+</body>
+</html>
