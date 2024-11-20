@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body id="color">
+    <h1>Gerador de Tabuada</h1>
+    <p>Insira um número para gerar a tabuada completa: </p>
+    <input type="number" id="numeroInput">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function gerarTabuada() {
+            // Obtem o valor do input
+            let numero = parseInt(document.getElementById("numeroInput").value);
+
+            // Insere o resultado na div
+            let resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = "";
+            
+            let list = "<ul>";
+            
+            list += "<li><strong>Tabuada de Adição</strong></li>";
+            for(let i = 1; i <= 10; i++) {
+                //list += "<li>" + numero + " x " + i + " = " + (numero * i) + "</li>"
+
+                list += `<li> ${numero} + ${i} = ${numero + i} </li>`;
+                //desta forma de concatenação fica melhor e mais agradável de ver e trabalhar
+            }
+
+            list += "<li><strong>Tabuada de Subtração</strong></li>";
+            for(let i = 1; i <= 10; i++) {
+                //list += "<li>" + numero + " x " + i + " = " + (numero * i) + "</li>"
+
+                list += `<li> ${numero} - ${i} = ${numero - i} </li>`;
+                //desta forma de concatenação fica melhor e mais agradável de ver e trabalhar
+            }
+
+            list += "<li><strong>Tabuada de Multiplicação</strong></li>";
+            for(let i = 1; i <= 10; i++) {
+                //list += "<li>" + numero + " x " + i + " = " + (numero * i) + "</li>"
+
+                list += `<li> ${numero} * ${i} = ${numero * i} </li>`;
+                //desta forma de concatenação fica melhor e mais agradável de ver e trabalhar
+            }
+            
+            list += "<li><strong>Tabuada de Divisão</strong></li>";
+            for(let i = 1; i <= 10; i++) {
+                //list += "<li>" + numero + " x " + i + " = " + (numero * i) + "</li>"
+
+                list += `<li> ${numero} / ${i} = ${numero / i} </li>`;
+                //desta forma de concatenação fica melhor e mais agradável de ver e trabalhar
+            }
+            
+            resultadoDiv.innerHTML += list;
+
+
+        }
+
+    </script>
+
+</body>
+</html>

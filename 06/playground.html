@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // FOR, WHILE, DO...WHILE
+        let contador = 0;
+
+        /*
+        while(contador <= 6) {
+            console.log("contagem while em: " + contador);
+            contador += 2;
+            // ou contador++(para subir o valor de 1 em 1) ou contador = contador + 1 (para subir qualquer valor, porém essa forma é mais complicada de se ler na sintaxe)
+       }
+
+        for(let i = -3; i <= 3; contador = i++) {
+            console.log("contagem for em: " + i);
+        }
+        */
+
+        do {
+            console.log("Contagem Do While em: ", contador);
+            contador++;
+        } while (contador < -5);
+
+        // o DO WHILE garante que o código seja executado pelo menos uma vez, mesmo que o valor seja FALSE
+
+
+        let entrada = prompt("Digite algo (ou 'sair' para parar): ");
+
+        while(entrada !== "sair") {
+            console.log("Você digitou: " + entrada);
+            entrada = prompt("Digite algo (ou 'sair' para parar): ")
+        }
+
+    </script>
+</body>
+</html>
