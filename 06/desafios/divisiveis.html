@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisiveis</title>
+</head>
+<body>
+    
+    <script>
+
+ /* ------------- CORRIGIDO COM O PROFESSOR ---------------------------*/
+
+    let limite = prompt("Digite um número positivo:");
+    
+    if (limite <= 0) {
+    console.log("O número não é positivo");
+
+    } else  {
+        let total = 0;
+
+        for (let i = 1; i <= limite; i++) {
+            if (i % 3 == 0 || i  % 5 == 0) { /* como usar o % (obtendo resultados divisiveis por 0) e usando o OU ( || ) */
+                total = total +1;
+            }
+
+        }
+        console.log(`O total de números divisiveis por 3 OU 5 é ${total}`);
+            }
+
+
+    </script>
+    
+</body>
+</html>
