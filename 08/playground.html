@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <h1>Eventos</h1>
+
+    <!--Evento Inline-->
+
+    <!-- Como o evento já existe (windows.alert) da para usar diretamente no elemento button
+    sem precisar usar um script e definir toda uma função para isso, o PROMPT também funcionaria diretamente inserido-->
+    <button onclick="window.alert('AAAAAAAAAAHHH')">Clique Aqui</button>
+
+    <!--Buscar Evento no JavaScript-->
+    <button id="meuBotao">Não Click!</button>
+
+    <!--Evento OnMouseOver-->
+    <p onmouseover="mudaOTexto(this)">Passe o mouse aqui</p> <!-- Aqui é usado o THIS  mesmo, para se refenciar a "isso", usando a própria função-->
+
+    <p onmouseover="mudaOTexto(this)">Um outro Texto</p>
+
+    <!--Evento onkeydown-->
+    <input onkeydown="mostrarTecla(event)" type="text"> <!--Aqui se usa o EVENT mesmo, mas na function eu posso escrever qualquer parametro-->
+
+    <script>
+        const btnClick = document.getElementById("meuBotao");      
+
+        btnClick.addEventListener("click", () => {
+            alert("BBBBBBBBBBBBBHH");
+        });
+
+        function mudaOTexto(elemento) {
+            elemento.innerText = "O mouse passou por aqui";
+        }
+
+        function mostrarTecla(evt) {
+            console.log("Tecla digitada:", evt.key)
+        }
+
+    </script>
+
+</body>
+</html>
