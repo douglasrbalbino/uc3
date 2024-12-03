@@ -33,6 +33,14 @@
             alert("BBBBBBBBBBBBBHH");
         });
 
+        btnClick.onmouseover = function() {
+            btnClick.style.background = "yellow";
+        }
+
+        btnClick.onmouseout = () => {
+            btnClick.style.background = "";
+        }
+
         function mudaOTexto(elemento) {
             elemento.innerText = "O mouse passou por aqui";
         }

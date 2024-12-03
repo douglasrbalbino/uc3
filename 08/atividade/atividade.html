@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="botaoCor">Passe o mouse aqui!</button>
+
+    </br>
+
+    <button id="mudapornome" onmouseover="ColocaCor()" onmouseout="RemoveCor()">Passe o mouse aqui também!</button>
+
+    </br>
+
+    <button id="meEsconda">Impossível Clickar</button>
+
+    <script>
+        const botao = document.getElementById("botaoCor");
+
+        //botao.onmouseover = function () {
+        //    botao.style.background = "yellow";
+        //}
+
+        botao.onmouseover = () => { // Primeira forma de usar uma função anonima
+            botao.style.background = "yellow";
+        }
+
+        botao.onmouseout = function () { // Segunda forma de usar uma função anonima
+            botao.style.background = ""
+        }
+
+        const botaoPorNome = document.getElementById("mudapornome");
+
+        function ColocaCor() {
+        botaoPorNome.style.background = "green";
+        }
+
+        function RemoveCor() {
+        botaoPorNome.style.background = "";
+        }
+
+        document.getElementById("meEsconda").onmouseover = function () {
+            this.style.display = "none"; // alteramos o display para fazer o elemento button desaparecer quando o mouse passar por cima
+        }
+
+
+
+    </script>
+</body>
+</html>

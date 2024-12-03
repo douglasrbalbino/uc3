@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- forma de mudar o css uxando uma função diretamente no script, alterando o elemento HTML pelo ID-->
+    <input type="text" id="inputTextos">
+    <p id="teclaPressionada"></p>
+
+    <script>
+        document.getElementById("inputTextos").onkeydown = function(evento) { // Aqui puxamos diretamente no elemento ID e já usamos a function
+            document.getElementById("teclaPressionada")
+                .innerText = "Tecla: " + evento.key;
+        }
+
+        
+
+        // SEGUNDA FORMA DE PUXAR A FUNCTION
+
+        //let elemento = document.getElementById("inputTextos"); <---- AQUI declaramos uma variável para o elemento ID do html, para depois puxar uma FUNCTION abaixo
+        
+        //elemento.onkeydown = function(evento) {
+        //    document.getElementById("teclaPressionada")
+        //        .innerText = "Tecla: " + evento.key;
+        //}
+    </script>
+</body>
+</html>

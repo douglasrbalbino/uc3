@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Clicaveis</title>
+</head>
+<body>
+    <button id="botaoContador">Clique Aqui</button>
+    <p id="exibirContagem">Cliques: </p>
+
+    <script>
+        let contador = 0;
+        const botao = document.getElementById("botaoContador") 
+        
+            botao.onclick = function() {
+                contador++
+                document.getElementById("exibirContagem").innerText = "Contador: " + contador;
+        }
+    </script>
+</body>
+</html>
