@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dica Eventos</title>
+    <style>
+        button {
+
+            font-size: large;
+            height: 100px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        <button onclick="mudarCorDoBotao()" id="BtnMudaCor">Mude Minha Cor</button>
+    <!-->
+
+    <button id="BtnMudaCor">Mude Minha Cor</button>
+
+    <script>
+
+        //function gerarCorAleatoria() { // crio uma função que gera uma cor ////aleatória
+        //    const r = Math.random() * 256;
+        //    const g = Math.random() * 256;
+        //    const b = Math.random() * 256;
+
+        //    return `rgb(${r}, ${g}, ${b})`;
+        //}
+
+        //function mudarCorDoBotao() { // crio uma função que vai mudar a cor de fundo do elemento HTML
+        //    const elemento = document.getElementById("BtnMudaCor");
+
+        //    elemento.style.background = gerarCorAleatoria(); // E aqui eu uso a função de cor aleatória para definar a cor do fundo
+        //}
+
+        function gerarCorAleatoria() {
+            const r = Math.random() * 256;
+            const g = Math.random() * 256;
+            const b = Math.random() * 256;
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+       
+        //document.getElementById("btnMudaCor").onclick = function() {
+        //    this.style.background = gerarCorAleatoria();
+        //}
+
+        document.getElementById("BtnMudaCor").addEventListener("click", () => {
+            BtnMudaCor.style.background = gerarCorAleatoria();
+        });
+
+    </script>
+</body>
+</html>
