@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste da massa</title>
+</head>
+<body id="corpo">
+
+    <h1 id="titulo">Titulo</h1>
+
+    <p id="texto">Um texto para teste.</p>
+
+    <button id="btnMuda">Clique aqui</button>
+    
+
+    <script>
+        let body = document.getElementById("corpo");
+
+        let title = document.getElementById("titulo");
+
+        let p = document.getElementById("texto");
+
+        let btn = document.getElementById("btnMuda");
+
+        function corAleatoria() {
+            let r = Math.random() * 256;
+            let g = Math.random() * 256;
+            let b = Math.random() * 256;
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        btn.onclick = function () {
+            title.style.display = "none";
+
+            p.innerText = "Agora esse é um novo parágrafo!";
+
+            p.style.color = corAleatoria()
+
+            btn.style.background = corAleatoria()
+
+            let novoItem = document.createElement("h2");
+            novoItem.innerText = "Esse é um novo elemento.";
+            body.appendChild(novoItem);
+
+        }
+
+    </script>
+</body>
+</html>
