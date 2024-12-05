@@ -20,8 +20,8 @@
         botaoTarefa.onclick = function() {
             let tarefa = document.querySelector("input").value;
 
-            const novaTarefa = document.createElement("li").innerText = tarefa;//continuar daqui------
-            document.querySelector("ul").append(novaTarefa);
+            const novaTarefa = document.createElement("li");
+            document.querySelector("ul").appendChild(novaTarefa).innerText = tarefa; // continuar daqui ------
         }
 
     </script>
