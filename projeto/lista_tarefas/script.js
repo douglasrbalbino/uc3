@@ -36,14 +36,32 @@ function criarTarefa(titulo) {
 
     // alterando adicionando e removendo uma classe ao elemento
     checkbox.addEventListener("change", () => {
-        if(checkbox.checked) {
+        if(checkbox.checked) { // o checked é referente ao input usado aqui, do type: checkbox
             li.classList.add("completed");
         } else {
             li.classList.remove("completed");
-        }
-    })
+        }s
+    });
 
-    li.append(checkbox);
-    li.append(textoDaTarefa);
+
+    //adicionando um botão para remover a tarefa
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "<strong>🗑</strong>"
+    removeBtn.addEventListener("click", () => {
+        listaDeTarefas.removeChild(li);
+    });
+
+    const divFlexLi = document.createElement("div");
+    divFlexLi.append(checkbox);
+    divFlexLi.append(textoDaTarefa);
+
+    li.append(divFlexLi);
+    li.append(removeBtn);
     listaDeTarefas.append(li);
 }
+
+tarefaInput.addEventListener("keydown", (event) => {
+    if(event.key === "Enter") {
+        addBtn.click();
+    }
+})
