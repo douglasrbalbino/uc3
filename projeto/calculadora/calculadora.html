@@ -9,28 +9,36 @@
 <body>
     
     <div class="calculadora">
-        <div id="visor">resultado 123456</div>
+        <h1>Calculadora</h1>
+        <input id="visor" type="text" readonly>
+
+        <button id="btnApagar">&larr;</button>
 
         <div class="btnCalculadora">
-            <button id="btn1" class="btnPadrao">1</button>
-            <button id="btn2" class="btnPadrao">2</button>
-            <button id="btn3" class="btnPadrao">3</button>
-            <button id="btnDiv" class="btnPadrao">&#247</button>
-            <button id="btn4" class="btnPadrao">4</button>
-            <button id="btn5" class="btnPadrao">5</button>
-            <button id="btn6" class="btnPadrao">6</button>
-            <button id="btnMult" class="btnPadrao">x</button>
-            <button id="btn7" class="btnPadrao">7</button>
-            <button id="btn8" class="btnPadrao">8</button>
-            <button id="btn9" class="btnPadrao">9</button>
-            <button id="btnMenos" class="btnPadrao">-</button>
-            <button id="btnPonto" class="btnPadrao">.</button>
-            <button id="btn0" class="btnPadrao">0</button>
-            <button id="btnReseta" class="btnPadrao">C</button>
-            <button id="btnMais" class="btnPadrao">+</button>
+    
+
+            <button class="btnPadrao" data-value="1">1</button>
+            <button class="btnPadrao" data-value="2">2</button>
+            <button class="btnPadrao" data-value="3">3</button>
+            <button class="btnPadrao" data-value="/">&#247</button>
+
+            <button class="btnPadrao" data-value="4">4</button>
+            <button class="btnPadrao" data-value="5">5</button>
+            <button class="btnPadrao" data-value="6">6</button>
+            <button class="btnPadrao" data-value="*">x</button>
+
+            <button class="btnPadrao" data-value="7">7</button>
+            <button class="btnPadrao" data-value="8">8</button>
+            <button class="btnPadrao" data-value="9">9</button>
+            <button class="btnPadrao" data-value="-">-</button>
+
+            <button class="btnPadrao" data-value="1.">.</button>
+            <button class="btnPadrao" data-value="0">0</button>
+            <button id="btnClear" class="btnPadrao">C</button>
+            <button class="btnPadrao" data-value="+">+</button>
         </div>
 
-        <button class="btnResultado">=</button>
+        <button id="btnResultado">=</button>
 
     </div>
 

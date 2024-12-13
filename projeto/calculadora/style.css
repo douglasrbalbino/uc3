@@ -1,8 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
 
 .calculadora {
     display: flex;
@@ -13,31 +16,52 @@
     padding: 15px;
     border: 2px solid black;
     border-radius: 10px;
-    margin: auto;
 }
+
+.calculadora h1 {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
 
 #visor {
     display: flex;
     align-items: center;
     justify-content: right;
+    text-align: right;
     height: 45px;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 1.5rem;
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 0 10px;
     border: 1px solid gray;
+    pointer-events: none;
+}
+
+#btnApagar {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+#btnApagar:hover {
+    background-color: rgb(255, 123, 0);
 }
 
 .btnCalculadora {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 5px;
+    gap: 10px;
 }
 
 .btnPadrao {
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
     background-color: rgb(53, 53, 53);
@@ -50,8 +74,16 @@
     background-color: rgb(65, 65, 65);
 }
 
-.btnResultado {
-    font-size: 16px;
+#btnClear {
+    background-color: orange;
+}
+
+#btnClear:hover {
+    background-color: rgb(255, 123, 0);
+}
+
+#btnResultado {
+    font-size: 1.5rem;
     font-weight: bolder;
     background-color: orange;
     color: white;
@@ -60,6 +92,6 @@
     border-radius: 12px;
 }
 
-.btnResultado:hover {
+#btnResultado:hover {
     background-color: rgb(255, 123, 0);
 }
