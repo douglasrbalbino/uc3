@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização CSS</title>
+</head>
+<body>
+    
+    <button id="changeStyleBtn">Alterar Estilo</button>
+    <div id="box" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+
+    <script>
+        /*
+        element.style.color = "red";
+        element.style.background = "black";
+        element.style.fontSize = "20px";
+        */
+
+        const button = document.getElementById("changeStyleBtn");
+        const box = document.getElementById("box");
+
+        button.addEventListener("click", () => {
+            button.innerText = "Mudei o texto",
+            box.style.background = "red";
+            box.style.border = "1px solid black";
+            box.style.borderRadius = "20px";
+        })
+    </script>
+
+
+</body>
+</html>

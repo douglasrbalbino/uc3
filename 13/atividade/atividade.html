@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista com toogle</title>
+    <style>
+        .item {    
+            padding: 10px;    
+            margin: 5px 0;
+            background: lightgray ;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background: yellow;
+            font-weight: bolder;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Itens</h1>
+
+    <ul id="itemList">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item highlight">Item 3</li>
+        <li class="item">Item 4</li>
+    </ul>
+    
+    <script>
+        const itemsDaLista = document.querySelectorAll(".item");
+    
+
+        // Usamos o forEach
+        itemsDaLista.forEach(item => { // Desta forma, estamos falando que para cada item da lista, damos um nome de "item"
+            item.addEventListener("click", () => { // Para cada "item", use esse eventlistener, nesse caso o evento click
+                item.classList.toggle("highlight"); // Usando o toggle
+            })
+        });
+    </script>
+    
+</body>
+</html>
