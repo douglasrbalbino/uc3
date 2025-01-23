@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card-selecionado {
+    background-color: lightblue;
+    border-color: darkblue;
+    font-weight: bold;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+.btn-comprar {
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-redefinir {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
