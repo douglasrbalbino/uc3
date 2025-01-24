@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.card');
 const btnRedefinir = document.getElementById('btnRedefinir');
 const btnComprar = document.getElementById('btnComprar');
 const resultado = document.getElementById('resultado');
-const telefoneDoWhatsapp = "5511948887050";
+const telefoneDoWhatsapp = "5511981681895";
 const whatsappLink = document.getElementById("whatsappLink");
 
 cards.forEach(card => {
@@ -34,9 +34,9 @@ btnComprar.addEventListener("click", () => {
     });
     resultado.innerText = `Preço Total R$ ${precoTotal}`;
 
-    const mensagem = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}`);
+    const mensagem = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}\n\n RS ${precoTotal}`);
 
-    whatsappLink.href = `https://wa.me/${telefoneDoWhatsapp}?text=${mensagem}`;
+    whatsappLink.href = `https://wa.me/${telefoneDoWhatsapp}?text=${mensagem + precoTotal}`;
 
 
 });
