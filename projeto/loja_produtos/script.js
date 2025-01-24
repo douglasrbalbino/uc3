@@ -1,6 +1,7 @@
 const listaProdutos = document.querySelectorAll(".card");
 const comprarBtn = document.getElementById("btnComprar");
 const redefinirBtn = document.getElementById("btnRedefinir");
+const resultado = document.getElementById("resultado");
 
 
 listaProdutos.forEach(produto => {
@@ -9,16 +10,26 @@ listaProdutos.forEach(produto => {
     })
 })
 
-comprarBtn.addEventListener("click", () => {
-    listaProdutos.forEach(item => {
-        if (!item.classList.contains("card-selecionado")) {
-            item.style.display= "none";
-        }
+listaProdutos.forEach(itm => {
+    redefinirBtn.addEventListener("click", () => {
+        itm.style.display = "";     
+        itm.classList.remove("card-selecionado");
+        resultado.innerText = "";
     })
 })
 
-listaProdutos.forEach(itm => {
-    redefinirBtn.addEventListener("click", () => {
-        itm.classList.remove("card-selecionado");
+comprarBtn.addEventListener("click", () => {
+    let precoTotal = 0;
+   
+    listaProdutos.forEach(card => {
+        if (!card.classList.contains("card-selecionado")) {
+            card.style.display= "none";
+        } else { 
+            precoTotal += parseFloat(card.dataset.preco);
+        }
     })
+    resultado.textContent = `A ${precoTotal}`;
+
+    console.log(precoTotal);
 })
+
