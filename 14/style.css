@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------- Wrapper Centralizado -------- */
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ------- Menu de Navegação -------- */
+.menu-navegacao .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.menu-dropdown button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#lista-menu {
+    list-style: none;
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.4);
+    display: none;
+}
+
+#lista-menu li {
+    padding: 10px;
+    color: black;
+}
+
+/* ------- Hero Section -------- */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: lightblue;
+    color: black;
+}
+
+/* ------- Seções -------- */
+.sobre, .servicos {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.sobre {
+    background-color: #ccc;
+}
+
+.servicos {
+    background-color: darkcyan;
+    color: white;
+}
+
+/* ------- Painel Lateral -------- */
+#painel-lateral {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0px 5px rgba(0,0,0, 0.3);
+    transition: right 0.2s ease-in-out;
+}
+
+#fechar-painel {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* ------- Slider -------- */
+.slider {
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: darkturquoise ;
+    min-width: 100%;
+    height: 250px;
+    border: 1px solid red;
+}
+
+/* ------- Rodapé -------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
